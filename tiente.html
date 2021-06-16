@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+</head>
+<body>
+<h1>chuyen doi tien te</h1>
+<input type="number" id="idt">
+<select id="tienvn">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+</select>
+<select id="tienusd">
+    <option value="23000">VND</option>
+    <option value="1">USD</option>
+</select>
+<button onclick="chuyendoi()">submit</button>
+<p id='idp'>đây là kết quả :</p>
+<script>
+    function chuyendoi(){
+        let a = +document.getElementById('idt').value;
+        let b = +document.getElementById('tienvn').value;
+        let c = +document.getElementById('tienusd').value;
+        let d = a*(c/b);
+        document.getElementById('idp').innerText=d;
+    }
+</script>
+</body>
+</html>
